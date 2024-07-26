@@ -65,7 +65,7 @@ class WhatsAppBot:
         self.driver.get("https://web.whatsapp.com/")
         print("Please scan the QR code to log in to WhatsApp Web.")
         try:
-            WebDriverWait(self.driver, 60).until(
+            WebDriverWait(self.driver, 80).until(
                 EC.presence_of_element_located((By.XPATH, '//canvas[@aria-label="Scan me!"]'))
             )
             time.sleep(40)  # Allow some time for the user to scan the QR code
