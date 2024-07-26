@@ -68,7 +68,7 @@ class WhatsAppBot:
             WebDriverWait(self.driver, 60).until(
                 EC.presence_of_element_located((By.XPATH, '//canvas[@aria-label="Scan me!"]'))
             )
-            time.sleep(25)  # Allow some time for the user to scan the QR code
+            time.sleep(40)  # Allow some time for the user to scan the QR code
         except TimeoutException:
             print("QR code not found or session expired.")
             return False
